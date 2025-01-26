@@ -186,7 +186,7 @@ h2 {
     font-size: 18px;
     margin: 20px auto;
     padding-left: 35px;
-    background-image: url("../assets/icons/icon1.svg");
+    background-image: url("./assets/icons/icon1.svg");
     background-repeat: no-repeat;
     background-position: left top;
     background-size: 20px 20px;
@@ -226,7 +226,7 @@ h2 {
 
 .price-box:hover li {
     color: #fff;
-    background-image: url("../assets/icons/icon2.svg");
+    background-image: url("./assets/icons/icon2.svg");
     background-repeat: no-repeat;
     background-position: left top;
     background-size: 20px 20px;
@@ -267,7 +267,7 @@ footer>small {
 
 @font-face {
     font-family: 'Corbel' ;
-    src: url("../assets/fonts/Corbel.ttf");
+    src: url("./assets/fonts/Corbel.ttf");
 }
 
 @media (max-width: 991px) {
