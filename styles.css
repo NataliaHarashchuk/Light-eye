@@ -113,7 +113,7 @@ h1 {
     border: 1px solid #14931f;
 }
 
-.start-button:hover {
+.start-button:active {
     background: #8be392;
     border: 1px solid #8be392;
     transition: 0.5s;
@@ -162,128 +162,93 @@ h2 {
     padding: 20px 30px;
     margin: 20px;
     border-radius: 30px;
+    background-color: white;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
 }
 
 .price-title {
-    height: 80px;
     margin: 15px 20px 20px ;
     font-size: 32px;
     text-align: center;
+    color: #14931f;
+    transition: 0.5s;
 }
 
 .price-box > ul {
     min-height: 200px;
-    padding-left: 75px;
+    padding-left: 40px;
+    list-style: none;
 }
 
-.price-box > ul >li {
+.price-box li {
     font-size: 18px;
     margin: 20px auto;
-    padding-left: 10px;
+    padding-left: 35px;
+    background-image: url("../assets/icons/icon1.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 20px 20px;
+    color: #646F75;
+    transition: 0.5s;
 }
 
 .price {
     font-size: 48px;
     margin: 0 5px 0 0;
+    color: #646F75;
+    transition: 0.5s;
 }
 
 .price-button-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto;
 }
 
-.white-color-background {
-    background-color: white;
-    transition: 0.5s;
-}
-
-.white-color-background> .price-title {
-    color: #14931f;
-    transition: 0.5s;
-}
-
-.white-color-background li {
-    list-style: url("../assets/icons/icon1.svg");
-    color: #646F75;
-    transition: 0.5s;
-}
-
-.price-white-box{
-    color: #646F75;
-    transition: 0.5s;
-}
-
-.buy-button-white-box{
+.buy-button{
     border: 1px solid #646F75;
     color: #646F75;
     background: #fff;
     transition: 0.5s;
 }
 
-.main-color-background {
-    background: #14931f;
-}
-
-.main-color-background> .price-title {
-    color: white;
-}
-
-.main-color-background li {
-    list-style: url("../assets/icons/icon2.svg");
-    color: #fff;
-}
-
-.price-green-box{
-    color: #fff;
-}
-
-.buy-button-green-box {
-    border: 1px solid #fff;
-    color: #646F75;
-    background-color: #fff;
-}
-
-.buy-button-green-box:hover {
-    background: #8be392;
-    border: 1px solid #8be392;
-    color: #fff;
-    transition: 0.5s;
-}
-
-
-
-
-.white-color-background:hover {
+.price-box:hover {
     background: #14931f;
     transition: 0.5s;
 }
 
-.white-color-background:hover> .price-title {
+.price-box:hover> .price-title {
     color: white;
 }
 
-.white-color-background:hover li {
-    list-style: url("../assets/icons/icon2.svg");
+.price-box:hover li {
+    color: #fff;
+    background-image: url("../assets/icons/icon2.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 20px 20px;
+}
+
+.price-box:hover .price{
     color: #fff;
 }
 
-.white-color-background:hover .price-white-box{
-    color: #fff;
-}
-
-.white-color-background:hover .buy-button-white-box{
+.price-box:hover .buy-button{
     border: 1px solid #fff;
     color: #646F75;
-    background-color: #fff; 
+    background-color: #fff;     
+    transition: 0.5s;
 }
 
-.white-color-background:hover .buy-button-white-box:hover {
-    background: #8be392;
-    border: 1px solid #8be392;
+.price-box .buy-button:active {
+    background: #14931f;
+    border: 1px solid #14931f;
     color: #fff;
     transition: 0.5s;
-} /* Зробила таку версію зміни кнопки, щоб вони не злилимь по кольору з фоном */
+}
 
 footer {
     width: 100%;
