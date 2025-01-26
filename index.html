@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./styles.css">
     <title>Light-eye</title>
 </head>
-
 <body>
     <header>
         <div class="logo-box">
@@ -42,43 +41,43 @@
         </section>
         <section class="price-section">
             <h2 class="section-title">Ціни</h2>
-            <div class="prices-container">
-                <div class="price-box white-color-background">
+            <div class="prices-container" id="prices-container">
+                <div class="price-box">
                     <h3 class="price-title">Діагностика</h3>
-                    <ul class="grey-font">
+                    <ul>
                         <li>Комлексний огляд</li>
                         <li>Скринінг ураження ока при діабеті</li>
                         <li>Комлексний огляд з додатковим сервісом</li>
                     </ul>
                     <div class="price-button-container">
-                        <p class="price price-white-box">75$</p>
-                        <button class="buy-button-white-box button">Купити</button>
+                        <p class="price">75$</p>
+                        <button class="buy-button button">Купити</button>
                     </div>
                 </div>
-                <div class="price-box main-color-background">
+                <div class="price-box">
                     <h3 class="price-title">Послуги комфорту</h3>
-                    <ul class="white-font">
+                    <ul>
                         <li>Денний стаціонар</li>
                         <li>Надання медичної допомоги</li>
                         <li>Нагляд лікаря вдень</li>
                         <li>Терапія тривожних стнів</li>
                     </ul>
                     <div class="price-button-container">
-                        <p class="price price-green-box">100$</p>
-                        <button class="buy-button-green-box button">Купити</button>
+                        <p class="price ">100$</p>
+                        <button class="buy-button button">Купити</button>
                     </div>
                 </div>
                 <div class="price-box white-color-background">
                     <h3 class="price-title">Апаратне лікування</h3>
-                    <ul class="grey-font">
+                    <ul>
                         <li>Пакет "Амбліопія"</li>
                         <li>Пакет "Косоокість"</li>
                         <li>Пакет "Резерви аккомодації"</li>
                         <li>Пакет "Косоокість + амбліопія"</li>
                     </ul>
                     <div class="price-button-container">
-                        <p class="price price-white-box">30$</p>
-                        <button class="buy-button-white-box button">Купити</button>
+                        <p class="price">30$</p>
+                        <button class="buy-button button">Купити</button>
                     </div>
                 </div>
             </div>
@@ -87,5 +86,23 @@
     <footer>
         <small>© Всі права захищені</small>
     </footer>
+    <script>
+        const priceTitles = document.querySelectorAll('.price-title');
+
+        const priceTitlesHeights = [];
+
+        priceTitles.forEach(priceTitle => {
+            const height = priceTitle.offsetHeight;
+            priceTitlesHeights.push(height);
+        });
+
+        priceTitlesHeights.sort((a, b) => b - a);
+
+        const maxHeight = priceTitlesHeights[0];
+
+        priceTitles.forEach(priceTitle => {
+            priceTitle.style.height = `${maxHeight}px`;
+        });
+    </script>
 </body>
 </html>
